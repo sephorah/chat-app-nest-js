@@ -72,3 +72,9 @@ export const TypographySmall = ({ children, className }: TypographyProps) => {
     </small>
   );
 };
+
+export const TypographyMuted = ({ children, className }: TypographyProps) => {
+  return (
+    <p className="text-sm text-muted-foreground">{children}</p>
+  );
+};
