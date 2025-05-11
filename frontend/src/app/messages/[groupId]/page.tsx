@@ -10,12 +10,14 @@ import { use } from "react";
 import { TypographyMuted, TypographySmall } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
+import ChatroomHeader from "@/components/chatroom-header";
 
-interface GroupMessagesParams {
+interface GroupMessagesProps {
   params: Promise<{ groupId: string }>;
 }
 
 const currentUserId = "seph-08";
+const currentChatroom = "Tokyo trip";
 const messages = [
   {
     id: 1,
@@ -96,14 +98,15 @@ const messages = [
   },
 ];
 
-const GroupMessages = ({ params }: GroupMessagesParams) => {
+const GroupMessages = ({ params }: GroupMessagesProps) => {
   const { groupId } = use(params);
 
   return (
     <>
       <div className="flex flex-col h-screen">
-        <div className="flex-1 overflow-y-auto px-4 py-2">
-          <ChatMessageList className="bg-slate-300">
+        <ChatroomHeader chatroomName={currentChatroom} />
+        <div className="flex flex-col overflow-y-auto px-4 py-2">
+          <ChatMessageList className="h-2/3 bg-slate-300">
             {messages.map((message, e) => {
               const variant =
                 message.senderId == currentUserId ? "sent" : "received";
@@ -139,6 +142,7 @@ const GroupMessages = ({ params }: GroupMessagesParams) => {
             })}
           </ChatMessageList>
         </div>
+
         <form className="flex flex-row space-x-2 mx-4 mb-4 mt-2 relative rounded-lg bg-background ">
           <ChatInput
             placeholder="Type your message here..."
