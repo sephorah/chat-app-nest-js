@@ -41,7 +41,7 @@ const AppSidebar = () => {
           {testChatrooms.map((chatroom, index) => (
             <div
               key={index}
-              className="border-0 flex items-center space-x-4 rounded-md p-4 hover:bg-blue-300"
+              className="border-0 flex items-center space-x-4 rounded-md p-4 hover:bg-[#d9a7c7]"
             >
               <ChatroomIcon
                 src="https://github.com/shadcn.png"

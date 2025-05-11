@@ -9,9 +9,7 @@ const MessagesLayout = ({
   return (
     <SidebarProvider>
       <AppSidebar />
-      <div className="bg-pink-200 w-full min-h-screen">
-        {children}
-      </div>
+      <div className="w-full">{children}</div>
     </SidebarProvider>
   );
 };

@@ -7,7 +7,7 @@ interface ChatroomHeaderProps {
 
 const ChatroomHeader = ({ chatroomName }: ChatroomHeaderProps) => {
   return (
-    <div className="bg-pink-400 mx-4 p-4 flex flex-row space-x-5">
+    <div className="mx-4 p-4 flex flex-row space-x-5">
       <ChatroomIcon
         src="https://github.com/shadcn.png"
         chatroomName={chatroomName}

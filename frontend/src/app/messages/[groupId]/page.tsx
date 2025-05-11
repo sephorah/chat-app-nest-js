@@ -106,7 +106,7 @@ const GroupMessages = ({ params }: GroupMessagesProps) => {
       <div className="flex flex-col h-screen">
         <ChatroomHeader chatroomName={currentChatroom} />
         <div className="flex flex-col overflow-y-auto px-4 py-2">
-          <ChatMessageList className="h-2/3 bg-slate-300">
+          <ChatMessageList className="h-2/3">
             {messages.map((message, e) => {
               const variant =
                 message.senderId == currentUserId ? "sent" : "received";
@@ -121,7 +121,7 @@ const GroupMessages = ({ params }: GroupMessagesProps) => {
                     <ChatBubbleMessage
                       variant={variant}
                       className={`${
-                        variant == "received" ? "bg-blue-300" : "bg-gray-200"
+                        variant == "received" ? "bg-[#d9a7c7]" : "bg-gray-200"
                       }`}
                     >
                       Hello, how has your day been? I hope you are doing well.
