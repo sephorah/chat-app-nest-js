@@ -18,7 +18,7 @@ import Link from "next/link";
 
 const formSchema = z.object({
   email: z.string().min(2).max(50),
-  password: z.string().min(2).max(12),
+  password: z.string().min(2).max(12), // to update to match isStrongPassword and move it to other file
   confirmPassword: z.string().min(2).max(12),
 });
 
@@ -70,10 +70,10 @@ const Register = () => {
             />
             <FormField
               control={form.control}
-              name="password"
+              name="confirmPassword"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel>Confirm password</FormLabel>
                   <FormControl>
                     <Input type="password" placeholder="Password" {...field} />
                   </FormControl>

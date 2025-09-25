@@ -103,7 +103,7 @@ const GroupMessages = ({ params }: GroupMessagesProps) => {
 
   return (
     <>
-      <div className="flex flex-col h-screen">
+      <div className="flex flex-col h-screen bg-[#f7edf4]">
         <ChatroomHeader chatroomName={currentChatroom} />
         <div className="flex flex-col overflow-y-auto px-4 py-2">
           <ChatMessageList className="h-2/3">
@@ -143,7 +143,7 @@ const GroupMessages = ({ params }: GroupMessagesProps) => {
           </ChatMessageList>
         </div>
 
-        <form className="flex flex-row space-x-2 mx-4 mb-4 mt-2 relative rounded-lg bg-background ">
+        <form className="flex flex-row space-x-2 mx-4 mb-4 mt-2 relative rounded-lg ">
           <ChatInput
             placeholder="Type your message here..."
             className="min-h-12 resize-none rounded-lg bg-background border-0 p-3 shadow-none focus-visible:ring-1 bg-white hover:bg-gray-100 focus-within:ring-1 focus-within:ring-ring  "
